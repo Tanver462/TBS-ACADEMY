@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBS ACADEMY - Online Learning Platform</title>
+    
+    <!-- FAVICON (Browser Tab Logo) -->
+    <!-- Replace 'logo.png' with your logo file name -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts Options (Poppins, Roboto, Montserrat, Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Outfit:wght@400;600;700&family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <!-- LOGO SECTION -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="image/logo_1.png" alt="TBS ACADEMY Logo" class="brand-logo" onerror="this.style.display='none'">
+                <span>TBS</span> ACADEMY
+            </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Navigation Links -->
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="quiz.html" class="nav-link">Quiz <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="quiz.html?cat=class8"><i class="fa-solid fa-book"></i> Class 8</a></li>
+                        <li><a href="quiz.html?cat=class9-10"><i class="fa-solid fa-book-open"></i> Class 9-10</a></li>
+                        <li><a href="quiz.html?cat=ssc2027"><i class="fa-solid fa-award"></i> SSC 2027</a></li>
+                        <li><a href="quiz.html?cat=ssc2028"><i class="fa-solid fa-fire"></i> SSC 2028</a></li>
+                    </ul>
+                </li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#videos" class="nav-link">YouTube Videos</a></li>
+                <li><a href="register.html" class="nav-link">Register</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero / Intro Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <!-- Left: Main copy -->
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fa-solid fa-bolt"></i> SSC 2026 Ready</span>
+                <h1>Test Your Knowledge.<br><span class="highlight">Master Your Board Exams.</span></h1>
+                <p>Interactive subject-wise quizzes, real-time analytics, and timed practice tests tailored specifically for SSC students.</p>
+                <div class="hero-btns">
+                    <a href="quiz.html" class="btn primary-btn"><i class="fa-solid fa-play"></i> Take a Demo Quiz</a>
+                    <a href="quiz.html" class="btn secondary-btn"><i class="fa-solid fa-layer-group"></i> Explore Quiz Batches</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><span class="stat-num">5</span><span class="stat-label"><i class="fa-solid fa-file-lines"></i> Quiz Exams</span></div>
+                    <div class="hero-stat"><span class="stat-num">100</span><span class="stat-label"><i class="fa-solid fa-circle-question"></i> Questions</span></div>
+                    <div class="hero-stat"><span class="stat-num">20</span><span class="stat-label"><i class="fa-solid fa-stopwatch"></i> Min Timer</span></div>
+                </div>
+            </div>
+
+            <!-- Right: Interactive demo quiz card -->
+            <div class="hero-demo" id="demoQuizCard">
+                <div class="demo-card">
+                    <div class="demo-card-top">
+                        <span class="demo-tag"><i class="fa-solid fa-circle-play"></i> Demo Quiz</span>
+                        <span class="demo-timer"><i class="fa-solid fa-clock"></i> 00:20</span>
+                    </div>
+                    <div class="demo-card-body">
+                        <p class="demo-qtext" id="demoQText">Loading question...</p>
+                        <div class="demo-options" id="demoOptions"></div>
+                        <p class="demo-feedback" id="demoFeedback">Pick an answer to see it in action</p>
+                        <div class="demo-progress">
+                            <div class="demo-progress-fill" id="demoProgressFill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use This Website Section -->
+    <section id="howto" class="howto-section">
+        <div class="howto-container">
+            <span class="howto-badge"><i class="fa-solid fa-lightbulb"></i> কিভাবে ব্যবহার করবেন?</span>
+            <h2>এই ওয়েবসাইট দিয়ে কীভাবে <span class="highlight">উপকৃত হবেন</span></h2>
+            <p class="howto-subtitle">TBS ACADEMY তে আপনার পড়াশোনাকে সহজ, সাশ্রয়ী ও ফলপ্রসূ করার সম্পূর্ণ ব্যবস্থা আছে।</p>
+
+            <div class="howto-grid">
+                <!-- Box 1: Quiz -->
+                <div class="howto-card howto-animate">
+                    <div class="howto-icon-wrap cyan">
+                        <i class="fa-solid fa-clipboard-question"></i>
+                    </div>
+                    <h3>MCQ কুইজ প্র্যাকটিস</h3>
+                    <p>প্রতিদিন কুইজ দিয়ে নিজেকে যাচাই করুন। প্রতিটি কুইজে ২০টি বোর্ড-স্তরের MCQ প্রশ্ন ও ২০ মিনিটের টাইমার আছে — ঠিক যেমন পরীক্ষায় হয়।</p>
+                    <ul class="howto-list">
+                        <li><i class="fa-solid fa-check"></i> ক্লাস ৮, ৯-১০, SSC 2027 & 2028</li>
+                        <li><i class="fa-solid fa-check"></i> তাৎক্ষণিক স্কোর ও উত্তর রিভিউ</li>
+                        <li><i class="fa-solid fa-check"></i> দুর্বল বিষয় শনাক্ত করুন</li>
+                    </ul>
+                    <a href="quiz.html" class="howto-link">কুইজ শুরু করো <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Box 2: Regular Study -->
+                <div class="howto-card howto-animate">
+                    <div class="howto-icon-wrap green">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3>নিয়মিত পড়াশোনা</h3>
+                    <p>আমাদের সাজানো নোটস ও সলিউশন দিয়ে প্রতিদিন পড়াশোনা করুন। সব কিছু সহজ ভাষায়, ধাপে ধাপে বোঝানো হয়েছে।</p>
+                    <ul class="howto-list">
+                        <li><i class="fa-solid fa-check"></i> চ্যাপ্টার ওয়ারাইজ নোটস</li>
+                        <li><i class="fa-solid fa-check"></i> বোর্ড সলিউশন গাইড</li>
+                        <li><i class="fa-solid fa-check"></i> ভিডিও টিউটোরিয়াল সাপোর্ট</li>
+                    </ul>
+                    <a href="index.html#notes" class="howto-link">নোটস দেখো <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Box 3: Exam Prep -->
+                <div class="howto-card howto-animate">
+                    <div class="howto-icon-wrap amber">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3>পরীক্ষার প্রস্তুতি</h3>
+                    <p>SSC ও হাই স্কুল পরীক্ষার আদর্শ প্রস্তুতির জন্য আমাদের কাঠামোবদ্ধ প্রোগ্রামে যোগ দিন।</p>
+                    <ul class="howto-list">
+                        <li><i class="fa-solid fa-check"></i> SSC 2027 & 2028 ফোকাসড কনটেন্ট</li>
+                        <li><i class="fa-solid fa-check"></i> মডেল টেস্ট ও মক পরীক্ষা</li>
+                        <li><i class="fa-solid fa-check"></i> বোর্ড প্যাটার্ন ভিত্তিক প্রশ্ন</li>
+                    </ul>
+                    <a href="register.html" class="howto-link">ব্যাচে যোগ দাও <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Box 4: Personal Support -->
+                <div class="howto-card howto-animate">
+                    <div class="howto-icon-wrap pink">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3>ব্যক্তিগত সাপোর্ট</h3>
+                    <p>যেকোনো প্রশ্ন বা দ্বিধা থাকলে সরাসরি আমাদের সাথে যোগাযোগ করুন। আমরা সবসময় আপনার পাশে আছি।</p>
+                    <ul class="howto-list">
+                        <li><i class="fa-solid fa-check"></i> WhatsApp ও ফোনে সরাসরি যোগাযোগ</li>
+                        <li><i class="fa-solid fa-check"></i> Facebook কমিউনিটি সাপোর্ট</li>
+                        <li><i class="fa-solid fa-check"></i> ডাউট ক্লিয়ারিং সেশন</li>
+                    </ul>
+                    <a href="index.html#contact" class="howto-link">যোগাযোগ করো <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Your Mentor Section -->
+    <section id="about" class="mentor-section">
+        <div class="mentor-container">
+            <div class="mentor-photo-wrap">
+                <div class="mentor-photo">
+                    <img src="image/galary/gg2.jpeg" alt="Tanver Ayan - Founder &amp; CEO, TBS ACADEMY">
+                </div>
+                <div class="mentor-chips">
+                    <span class="mentor-chip verified"><i class="fa-solid fa-circle-check"></i> Verified Founder &amp; CEO</span>
+                    <span class="mentor-chip"><i class="fa-solid fa-award"></i> SSC Expert</span>
+                    <span class="mentor-chip"><i class="fa-solid fa-chalkboard-user"></i> Live Classes</span>
+                </div>
+            </div>
+
+            <div class="mentor-info">
+                <span class="mentor-badge"><i class="fa-solid fa-crown"></i> Meet the Founder &amp; CEO</span>
+                <h2>Hello, I'm <span class="highlight">Tanver Ayan</span></h2>
+                <h3>Founder &amp; CEO, TBS ACADEMY</h3>
+                <p>As the founder and CEO of TBS ACADEMY, I'm on a mission to help SSC students master their board exams through clear explanations, structured notes, and friendly personal support — all online, right from home.</p>
+                <ul class="mentor-features">
+                    <li><i class="fa-solid fa-certificate"></i> Dedicated to board-exam success</li>
+                    <li><i class="fa-solid fa-book-open"></i> Exam-focused notes &amp; board solutions</li>
+                    <li><i class="fa-solid fa-heart"></i> Personal doubt-clearing, anytime</li>
+                </ul>
+                <div class="mentor-actions">
+                    <a href="quiz.html" class="btn"><i class="fa-solid fa-circle-play"></i> Take a Demo Quiz</a>
+                    <a href="register.html" class="btn secondary-btn"><i class="fa-solid fa-user-plus"></i> Join My Batch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Services Section -->
+    <section id="services" class="services-section">
+        <h2><i class="fa-solid fa-gem"></i> What I Offer</h2>
+        <p class="subtitle">Everything you need for SSC preparation — structured lessons, live classes, and personal support, all online.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-book-open"></i></div>
+                <h3>SSC Preparation</h3>
+                <p>Complete board-exam readiness with clear, simplified explanations and proven study strategies.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Subject-wise chapter breakdowns</li>
+                    <li><i class="fa-solid fa-check"></i> MCQ, CQ & short question practice</li>
+                    <li><i class="fa-solid fa-check"></i> Past board question solving</li>
+                    <li><i class="fa-solid fa-check"></i> Exam-focused study notes</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Online Live Classes</h3>
+                <p>Interactive virtual classes from home with personal attention and a comfortable learning pace.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Live, interactive sessions</li>
+                    <li><i class="fa-solid fa-check"></i> Small batch sizes</li>
+                    <li><i class="fa-solid fa-check"></i> Recorded class replays</li>
+                    <li><i class="fa-solid fa-check"></i> Weekly progress review</li>
+                </ul>
+                <a href="register.html" class="service-link">Join a Batch <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <h3>Doubt Clearing & 1-on-1 Support</h3>
+                <p>Get personal help whenever you're stuck — clear concepts and build exam confidence.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> One-on-one Q&amp;A sessions</li>
+                    <li><i class="fa-solid fa-check"></i> WhatsApp &amp; voice support</li>
+                    <li><i class="fa-solid fa-check"></i> Step-by-step problem solving</li>
+                    <li><i class="fa-solid fa-check"></i> Pre-exam tips &amp; motivation</li>
+                </ul>
+                <a href="#contact" class="service-link">Ask a Question <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Lessons Section -->
+    <section id="videos" class="videos-section">
+        <h2><i class="fa-solid fa-circle-play"></i> Video Lessons</h2>
+        <p class="subtitle">Watch lessons right here on the website — or visit our YouTube channel for the full library.</p>
+
+        <div class="videos-layout">
+            <!-- Main Video Player -->
+            <div class="main-video-container">
+                <video id="mainPlayer" controls preload="metadata" playsinline>
+                    <source src="video/jibgoto.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3 id="mainVideoTitle">Featured Video Lesson</h3>
+            </div>
+
+            <!-- Sidebar: Video Grid + Channel CTA -->
+            <div class="videos-sidebar">
+                <div class="video-grid" id="videoGrid">
+                    <!-- Dynamically populated via JavaScript -->
+                </div>
+
+                <!-- YouTube Channel Preview Card -->
+                <a href="https://youtube.com/@tanverbiosphere?si=oNDWWl9oIJH8LLA_" target="_blank" rel="noopener noreferrer" class="yt-channel-preview">
+                    <div class="yt-banner">
+                        <div class="yt-banner-channel">
+                            <img src="https://yt3.googleusercontent.com/lMoGlzOXsPsL5mX1KXsVVmKbyAqlXMOEv88JvPGkx7UOEYbzSDnNI4qwOj9tL3wQ3t0zT1RzKQ=s176-c-k-c0x00ffffff-no-rj" alt="Channel Logo" onerror="this.onerror=null;this.style.display='none';this.parentElement.querySelector('.yt-banner-fallback').style.display='flex'">
+                            <div class="yt-banner-fallback" style="display:none"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <div class="yt-banner-text">
+                            <i class="fa-brands fa-youtube"></i> YouTube
+                        </div>
+                    </div>
+                    <div class="yt-channel-body">
+                        <div class="yt-channel-meta">
+                            <h4>Tanver Ayan</h4>
+                            <p class="yt-handle">@tanverbiosphere</p>
+                            <p class="yt-desc">Biology & Science lessons for SSC students</p>
+                        </div>
+                        <div class="yt-subscribe-btn">
+                            <i class="fa-solid fa-bell"></i> Subscribe
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Image Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h2><i class="fa-solid fa-images"></i> About Tanver Ayan and TBS Academy</h2>
+        <p class="subtitle">From student to mentor — a glimpse into classes, activities, and moments with Tanver Ayan. Click any image to view it in full screen.</p>
+
+        <div class="about-roles">
+            <span class="about-role student"><i class="fa-solid fa-graduation-cap"></i> Student</span>
+            <span class="about-role mentor"><i class="fa-solid fa-chalkboard-user"></i> Mentor</span>
+            <span class="about-role ceo"><i class="fa-solid fa-crown"></i> Founder &amp; CEO</span>
+            <span class="about-role academy"><i class="fa-solid fa-award"></i> TBS ACADEMY</span>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Dynamically populated via JavaScript -->
+        </div>
+    </section>
+
+    <!-- যুক্ত হও আমাদের সাথে (Join Us Section) -->
+    <section id="contact" class="contact-section bangla-join">
+        <p class="bangla-join-sub">আমাদের লাইভ ক্লাসে অংশ নিতে এবং সবসময় আপডেটেড থাকতে,</p>
+        <h2 class="bangla-join-heading">যুক্ত হও <span class="highlight">আমাদের সাথে</span></h2>
+
+        <div class="bangla-social-grid">
+            <a href="https://www.youtube.com/@tanverbiosphere" target="_blank" class="bangla-social-card yt">
+                <span class="bangla-social-icon"><i class="fa-brands fa-youtube"></i></span>
+                <span class="bangla-social-name">ইউটিউব চ্যানেল</span>
+                <span class="bangla-social-action">ভিডিও দেখো <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61579015435565" target="_blank" class="bangla-social-card fb">
+                <span class="bangla-social-icon"><i class="fa-brands fa-facebook-f"></i></span>
+                <span class="bangla-social-name">ফেসবুক পেজ</span>
+                <span class="bangla-social-action">যুক্ত হও <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="https://wa.me/8801905446825" target="_blank" class="bangla-social-card wa">
+                <span class="bangla-social-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                <span class="bangla-social-name">হোয়াটসঅ্যাপ</span>
+                <span class="bangla-social-action">যুক্ত হও <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="mailto:tanvet51@gmail.com" class="bangla-social-card em">
+                <span class="bangla-social-icon"><i class="fa-solid fa-envelope"></i></span>
+                <span class="bangla-social-name">ইমেইল</span>
+                <span class="bangla-social-action">যোগাযোগ করো <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a href="https://www.tiktok.com/@tanverbiosphere?_r=1&_t=ZS-99jU53sy1ye" target="_blank" class="bangla-social-card tt">
+                <span class="bangla-social-icon"><i class="fa-brands fa-tiktok"></i></span>
+                <span class="bangla-social-name">টিকটক</span>
+                <span class="bangla-social-action">ফলো করো <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+        </div>
+
+        <div class="contact-phone">
+            <i class="fa-solid fa-phone"></i> <a href="tel:+8801905446825">01905446825</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61579015435565" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@tanverbiosphere" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/8801905446825" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@tanverbiosphere?_r=1&_t=ZS-99jU53sy1ye" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="mailto:tanvet51@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2026 TBS ACADEMY | All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

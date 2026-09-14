@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Practice Exams - TBS ACADEMY</title>
+
+    <!-- FAVICON (Browser Tab Logo) -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts Options (Poppins, Roboto, Montserrat, Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Outfit:wght@400;600;700&family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <!-- LOGO SECTION -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="image/logo_1.png" alt="TBS ACADEMY Logo" class="brand-logo" onerror="this.style.display='none'">
+                <span>TBS</span> ACADEMY
+            </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Navigation Links -->
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="quiz.html" class="nav-link active-link">Quiz <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="quiz.html?cat=class8"><i class="fa-solid fa-book"></i> Class 8</a></li>
+                        <li><a href="quiz.html?cat=class9-10"><i class="fa-solid fa-book-open"></i> Class 9-10</a></li>
+                        <li><a href="quiz.html?cat=ssc2027"><i class="fa-solid fa-award"></i> SSC 2027</a></li>
+                        <li><a href="quiz.html?cat=ssc2028"><i class="fa-solid fa-fire"></i> SSC 2028</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#videos" class="nav-link">YouTube Videos</a></li>
+                <li><a href="register.html" class="nav-link">Register</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Quiz Page Content -->
+    <section id="quiz" class="quiz-section">
+        <h2 id="quizCategoryTitle"><i class="fa-solid fa-clipboard-question"></i> MCQ Practice Exams</h2>
+        <p class="subtitle" id="quizCategoryDesc">Choose a practice exam below. Each contains 20 SSC-level questions with a 20-minute timer.</p>
+
+        <!-- Coming Soon Message (shown for empty categories) -->
+        <div class="quiz-coming-soon" id="quizComingSoon" style="display: none;">
+            <i class="fa-solid fa-hourglass-half"></i>
+            <h3>কুইজ শীঘ্রই আসছে!</h3>
+            <p>এই ক্যাটাগরিতে কুইজ তৈরি করা হচ্ছে। অপেক্ষা করুন!</p>
+            <a href="quiz.html" class="btn primary-btn"><i class="fa-solid fa-arrow-left"></i> সব কুইজ দেখো</a>
+        </div>
+
+        <!-- Quiz Selection Grid -->
+        <div class="quiz-selection" id="quizSelection">
+            <!-- Dynamically populated via JavaScript -->
+        </div>
+
+        <!-- Quiz Taking Interface -->
+        <div class="quiz-taking" id="quizTaking" style="display: none;">
+            <div class="quiz-header" id="quizHeader">
+                <div class="quiz-progress">
+                    <span id="progressText">Question 1 of 20</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="quiz-timer" id="quizTimer">20:00</div>
+            </div>
+
+            <div class="quiz-card" id="quizCard">
+                <div class="question-area" id="questionArea">
+                    <h3 id="questionText">Loading question...</h3>
+                    <div class="options-grid" id="optionsGrid"></div>
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn secondary-btn" id="prevBtn" disabled><i class="fa-solid fa-chevron-left"></i> Previous</button>
+                    <button class="btn primary-btn" id="nextBtn">Next <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Results Review -->
+        <div class="quiz-result" id="quizResult" style="display: none;">
+            <div class="result-header">
+                <h3><i class="fa-solid fa-trophy"></i> Quiz Completed!</h3>
+                <div class="score-circle" id="scoreCircle">
+                    <span id="scorePercent">0%</span>
+                </div>
+                <p id="scoreText">You scored <strong id="scoreValue">0</strong> out of 20</p>
+            </div>
+            <div class="result-actions">
+                <button class="btn primary-btn" id="reviewBtn"><i class="fa-solid fa-list-check"></i> Review All Answers</button>
+                <button class="btn secondary-btn" id="retryBtn"><i class="fa-solid fa-rotate"></i> Try Another Quiz</button>
+            </div>
+
+            <!-- Detailed Question Review List -->
+            <div class="review-list" id="reviewList"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 TBS ACADEMY | All Rights Reserved.</p>
+    </footer>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
