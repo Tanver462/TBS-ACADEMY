@@ -96,7 +96,7 @@
     });
 
     // Welcome message
-    addBotMsg('নমস্কার! আমি আপনার AI টিউটর। SSC 준비를 लेकर যেকোনো প্রশ্ন জিজ্ঞেস করুন — গাণিতিক, ভৌতবিজ্ঞান, রসায়ন, জীববিজ্ঞান বা সাধারণ জ্ঞান।');
+    addBotMsg('Hello! I\'m your AI Tutor. Ask me anything about SSC preparation — Math, Physics, Chemistry, Biology, or General Knowledge.');
   }
 
   function toggle() {
